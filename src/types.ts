@@ -11,7 +11,7 @@ interface AuthResponse {
 interface Config {
   clientId: string;
   clientSecret: string;
-  redirectUri: string;
+  redirectUri?: string;
   account?: string;
   env?: "prod" | "dev";
   tokens?: AuthResponse | null;
