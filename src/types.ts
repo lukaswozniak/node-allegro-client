@@ -9,7 +9,6 @@ interface AuthResponse {
 }
 
 interface Config {
-  appName: string;
   clientId: string;
   clientSecret: string;
   redirectUri: string;

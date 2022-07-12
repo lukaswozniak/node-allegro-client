@@ -1,7 +1,6 @@
 import AllegroClient, { Config } from "../src";
 
 const config: Config = {
-  appName: "APP_NAME",
   clientId: "CLIENT_ID",
   clientSecret: "SECRET_KEY",
   redirectUri: "REDIRECT_URI",
