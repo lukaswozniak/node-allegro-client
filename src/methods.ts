@@ -13,6 +13,7 @@ function handleAuthResponse(client, data: AuthResponse) {
   }
   data.expire_ts = data.expires_in + Date.now() / 1000;
   client.config.tokens = data;
+  client.config.onStoreTokensCallback?.(data)
   storeTokens(client.config.account, data);
 }
 
@@ -151,6 +152,7 @@ function refresh(config: Config): Promise<AuthResponse | Error> {
         }
         data.expire_ts = data.expires_in + Date.now() / 1000;
         config.tokens = data;
+        config.onStoreTokensCallback?.(data)
         storeTokens(account!, data);
         return resolve(data);
       })

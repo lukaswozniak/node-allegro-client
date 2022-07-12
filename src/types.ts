@@ -19,6 +19,7 @@ interface Config {
   baseUrl?: string;
   apiUrl?: string;
   oAuth?: string;
+  onStoreTokensCallback?: (tokens: AuthResponse) => void
 }
 
 interface Error {
